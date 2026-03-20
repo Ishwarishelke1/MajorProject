@@ -20,17 +20,20 @@ router
 router.get("/new",isLoggedIn,ListingController.renderNewForm);
 
 router.get("/search", async (req, res) => {
-    let { country } = req.query;
+    let { query } = req.query;
 
-    if (!country) {
+    if (!query) {
         return res.redirect("/listings");
     }
 
     const listings = await Listing.find({
-        country: { $regex: country, $options: "i" } // case-insensitive search
+        $or: [
+            { location: { $regex: query, $options: "i" } },
+            { country: { $regex: query, $options: "i" } }
+        ]
     });
 
-    res.render("listings/index", { allListings: listings });
+    res.render("listings/index", { allListings: listings, category: null });
 });
 
 
