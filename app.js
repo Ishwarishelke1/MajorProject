@@ -94,7 +94,7 @@ app.use("/",userRouter);
 
 //route for all error message
 app.get("/", (req, res) => {
-    res.send("Home");
+    res.redirect("/listings");
 });
 
 // 404 handler (must be last)
