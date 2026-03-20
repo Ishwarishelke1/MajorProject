@@ -27,7 +27,7 @@ router.get("/search", async (req, res) => {
     }
 
     const listings = await Listing.find({
-        country: { $regex: location, $options: "i" } // case-insensitive search
+        location: { $regex: location, $options: "i" } // case-insensitive search
     });
 
     res.render("listings/index", { allListings: listings, category: null  });
