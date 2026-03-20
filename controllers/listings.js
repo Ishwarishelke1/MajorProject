@@ -1,9 +1,18 @@
 const Listing = require("../models/listing.js");
 //callback fun for indext route from the route folder-listings.js
 
-module.exports.index= async(req,res)=>{
-    const allListings=await Listing.find({});
-    res.render("listings/index",{allListings});
+module.exports.index = async (req, res) => {
+    const { category } = req.query;
+
+    let allListings;
+
+    if (category) {
+        allListings = await Listing.find({ category });
+    } else {
+        allListings = await Listing.find({});
+    }
+
+    res.render("listings/index", { allListings, category });
 };
 
 module.exports.renderNewForm=(req,res)=>{
