@@ -6,6 +6,7 @@ module.exports.listingSchema = Joi.object({
             "string.empty": "Title is required"
         }),
         description: Joi.string().required(),
+        category: Joi.string().required(),  
         image: Joi.string().uri().allow("").optional(),
         price: Joi.number().min(0).required().messages({
             "number.min": "Price cannot be negative"
