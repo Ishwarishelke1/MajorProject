@@ -40,61 +40,67 @@
 
     <div id="filters">
         <div class="filter">
+            <a href="/listings?category=Trending">
+
             <div>
-                <a href="/listings?category=Trending">
 
                 <i class="fa-solid fa-fire"></i>
             </div>
             <p>Trending</p>
+            </a>
         </div>
         <div class="filter">
+            <a href="/listings?category=Rooms">
             <div>
-                <a href="/listings?category=Rooms">
                 <i class="fa-solid fa-bed"></i>
             </div>
             <p>Rooms</p>
+            </a>
         </div>
         <div class="filter">
-            
+            <a href="/listings?category=Iconic Cities">
             <div>
-                <a href="/listings?category=Iconic Cities">
-
                 <i class="fa-solid fa-mountain-city"></i></div>
             <p>Iconic Cities</p>
+            </a>
         </div>
         
         <div class="filter">
-
+            <a href="/listings?category=Amazing Pools">
             <div>
-                <a href="/listings?category=Amazing Pools">
-
                 <i class="fa-solid fa-person-swimming"></i></div>
             <p>Amazing Pools</p>
+            </a>
         </div>
         <div class="filter">
+            <a href="/listings?category=Camping">
+
             <div>
-                <a href="/listings?category=Camping">
                 <i class="fa-solid fa-campground"></i></div>
             <p>Camping</p>
+            </a>
         </div>
         <div class="filter">
-            <div>
                 <a href="/listings?category=Farms">
-                <i class="fa-solid fa-cow"></i></div>
-            <p>Farms</p>
-        </div><div class="filter">
-            <div>
-                <a href="/listings?category=Arctic">
-                <i class="fa-solid fa-snowflake"></i></div>
-            <p>Arctic</p>
+                <div>
+                    <i class="fa-solid fa-cow"></i></div>
+                    <p>Farms</p>
+                </a>
+        </div>
+        <div class="filter">
+            <a href="/listings?category=Arctic">
+                <div>
+                    <i class="fa-solid fa-snowflake"></i></div>
+                <p>Arctic</p>
+            </a>
         </div>
         
         </div><div class="filter">
-            <div>
-                <a href="/listings?category=Boat">
-        
-                <i class="fa-solid fa-sailboat"></i></div>
-            <p>Boat</p>
+            <a href="/listings?category=Boat">
+                <div>        
+                    <i class="fa-solid fa-sailboat"></i></div>
+                <p>Boat</p>
+            </a>
         </div>
         <div class="tax-toggle">
             <div class="form-check-reverse form-switch">
@@ -103,6 +109,9 @@
             </div>
         </div>
     </div>
+    <h3 style="margin-top: 2rem;">
+        <%= category ? category : "All Listings" %>
+    </h3>
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
         <% for(let listing  of allListings){ %>
         <a href="/listings/<%= listing.id%> " class="listing-link">

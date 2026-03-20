@@ -19,10 +19,23 @@
             <div class="invalid-feedback">Description Should be short..</div>
 
         </div>
-        
+        <div class="mb-3">
+            <label class="form-label">Category</label>
+            <select name="listing[category]" class="form-control" required>
+                <option value="Trending">Trending</option>
+                <option value="Rooms">Rooms</option>
+                <option value="Iconic Cities">Iconic Cities</option>
+                <option value="Amazing Pools">Amazing Pools</option>
+                <option value="Camping">Camping</option>
+                <option value="Farms">Farms</option>
+                <option value="Arctic(Snow)">Arctic</option>
+                <option value="Boat">Boat</option>
+
+            </select>
+        </div>
         <div class="mb-3">
             <label for="image" class="form-label"> Upload Image</label>
-            <input name="listing[image]"  type="file" class="form-control">
+            <input name="listing[image]"  type="file" class="form-control" required>
             required
         </div>
         <div class="row">
