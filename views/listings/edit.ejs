@@ -20,6 +20,20 @@
 
         </div>
         <div class="mb-3">
+            <label class="form-label">Category</label>
+            <select name="listing[category]" class="form-control" required>
+                <option value="Trending" <%= listing.category === "Trending" ? "selected" : "" %>>Trending</option>
+                <option value="Rooms" <%= listing.category === "Rooms" ? "selected" : "" %>>Rooms</option>
+                <option value="Iconic Cities" <%= listing.category === "Iconic Cities" ? "selected" : "" %>>Iconic Cities</option>
+                <option value="Amazing Pools" <%= listing.category === "Amazing Pools" ? "selected" : "" %>>Amazing Pools</option>
+                <option value="Camping" <%= listing.category === "Camping" ? "selected" : "" %>>Camping</option>
+                <option value="Farms" <%= listing.category === "Farms" ? "selected" : "" %>>Farms</option>
+                <option value="Arctic(Snow)" <%= listing.category === "Arctic(snow)" ? "selected" : "" %>>Arctic</option>
+                <option value="Boat" <%= listing.category === "Boat" ? "selected" : "" %>>Boat</option>
+
+            </select>
+        </div>
+        <div class="mb-3">
             Original Listing Image <br>
             <img src="<%= originalImageUrl %>" >
 

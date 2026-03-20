@@ -22,14 +22,14 @@
         <div class="mb-3">
             <label class="form-label">Category</label>
             <select name="listing[category]" class="form-control" required>
-                <option value="Trending">Trending</option>
-                <option value="Rooms">Rooms</option>
-                <option value="Iconic Cities">Iconic Cities</option>
-                <option value="Amazing Pools">Amazing Pools</option>
-                <option value="Camping">Camping</option>
-                <option value="Farms">Farms</option>
-                <option value="Arctic(Snow)">Arctic</option>
-                <option value="Boat">Boat</option>
+                <option value="Trending" <%= listing.category === "Trending" ? "selected" : "" %> >Trending</option>
+                <option value="Rooms" <%= listing.category === "Rooms" ? "selected" : "" %>>Rooms</option>
+                <option value="Iconic Cities" <%= listing.category === "Iconic Cities" ? "selected" : "" %>>Iconic Cities</option>
+                <option value="Amazing Pools" <%= listing.category === "Amazing Pools" ? "selected" : "" %>>Amazing Pools</option>
+                <option value="Camping" <%= listing.category === "Camping" ? "selected" : "" %>>Camping</option>
+                <option value="Farms" <%= listing.category === "Farms" ? "selected" : "" %>>Farms</option>
+                <option value="Arctic(Snow)" <%= listing.category === "Arctic(Snow)" ? "selected" : "" %>>Arctic</option>
+                <option value="Boat" <%= listing.category === "Boat" ? "selected" : "" %>>Boat</option>
 
             </select>
         </div>
