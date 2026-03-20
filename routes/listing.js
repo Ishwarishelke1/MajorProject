@@ -30,7 +30,7 @@ router.get("/search", async (req, res) => {
         country: { $regex: location, $options: "i" } // case-insensitive search
     });
 
-    res.render("listings/index", { allListings: listings });
+    res.render("listings/index", { allListings: listings, category: null  });
 });
 
 
