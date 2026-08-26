@@ -1,7 +1,7 @@
 # Airbnb Clone 🏠
 
 A full-stack Airbnb Clone web application built using the MERN Stack (JavaScript, 
-MongoDB, Express.js, React.js, Node.js).
+MongoDB, Express.js, Node.js).
 This project allows users to explore property listings, add their own stays, and experience a modern booking platform UI inspired by Airbnb.
 
 ---
@@ -28,7 +28,7 @@ This project allows users to explore property listings, add their own stays, and
 * JavaScript
 * HTML5
 * CSS3
-* Bootstrap / Tailwind CSS
+* Bootstrap & Tailwind CSS
 
 ### Backend
 
