@@ -58,20 +58,13 @@ cd Airbnb_clone_MERN_Project
 
 ### 3️⃣ Install Dependencies
 
-#### Backend
-
-```bash
-cd backend
-npm install
-```
----
 
 ## ▶️ Run the Project
 
-### Start Backend Server
+### Start  Server
 
 ```bash
-npm start
+nodemon start
 ```
 
 ---
